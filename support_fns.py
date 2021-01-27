@@ -5,7 +5,7 @@ import numpy as np
 import tensorflow as tf
 
 
-def seed_experiment(seed=None):
+def seed_experiment(seed=None, use_cpu=True):
     """ Seed all the pseudo-random generators to reproduce results
     More info:
     https://stackoverflow.com/questions/50659482/why-cant-i-get-reproducible-results-in-keras-even-though-i-set-the-random-seeds"""
@@ -27,5 +27,6 @@ def seed_experiment(seed=None):
     tf.random.set_seed(seed_value)
     
     # 5. force tensorflow to use CPU
-    os.environ['CUDA_VISIBLE_DEVICES'] = ''
+    if use_cpu:
+        os.environ['CUDA_VISIBLE_DEVICES'] = ''
     return seed_value

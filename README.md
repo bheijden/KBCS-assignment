@@ -3,7 +3,7 @@
 ## Installation instructions
 With your terminal, move into the directory
 ```
-cd assignment_KBC
+cd KBCS-assignment
 ```
 To run the code, we require the following dependencies. Install them so that your python interpreter can access them.
 ```
