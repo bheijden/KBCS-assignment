@@ -1,0 +1,14 @@
+name: kbcs
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - matplotlib
+  - psutil
+  - pip
+  - pip:
+    - tensorflow==2.3.1
+    - gym
+    - termcolor
+    - colorama
+    - scikit-image
