@@ -1,12 +1,14 @@
 # Vision-based angle prediction (SC42050 - Knowledge Based Control Systems)
 
 ## Installation instructions
-To set up the code locally, clone this repository to your personal computer. 
-You can download the code as a ZIP file and extract it somewhere locally, or clone it via the terminal.
-On linux, you can clone the repository to your current working directory with
+To set up the code locally, either download the ZIP file from Brightspace, or clone the Github repository to your personal computer. 
+
+You can clone (tested on Linux) the repository to your current working directory with:
 ```
 git clone https://github.com/bheijden/KBCS-assignment.git
 ```
+After you extracted all the files somewhere locally from the ZIP file, or after you cloned the Github repository, move into that directory.
+
 To run the code, we require the following dependencies. Install them so that your python 3.7 interpreter can access them. 
 You can do this manually, or by creating an anaconda virtual environment (see next instruction).
 ```
@@ -38,6 +40,8 @@ With the environment activated, you can run the python scripts with:
 python generate_data.py
 python train.py
 ```
+Note that `train.py` will only run after you make appropriate changes to the code as specified in the assignment.
+
 You can find information about installing anaconda here:
 
 Ubuntu 18.04: https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart

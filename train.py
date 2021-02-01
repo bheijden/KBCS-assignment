@@ -9,8 +9,8 @@ from driver import Driver
 from environments.pendulum import UnderactuatedPendulum
 
 # SEED EXPERIMENT TO CREATE REPRODUCIBLE RESULTS
-seed_value = 0
 """TASK 1.4: PSEUDO-RANDOM GENERATOR"""
+seed_value = 0
 # seed_experiment(seed=seed_value)  # Comment this line to disable the seeding
 """TASK 1.4: END"""
 
