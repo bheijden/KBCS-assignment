@@ -88,14 +88,10 @@ except NameError:
 
 # COMPILE MODEL
 """TASK 1.1: COMPILE MODEL HERE"""
-model.compile(optimizer='adam', loss=tf.keras.losses.MeanSquaredError())
+
 """TASK 1.1: END"""
 
 # FIT MODEL ON DATA
-validation_split = 0.2
-shuffle = True
-batch_size = 64
-epochs = 30
 if model_type != 'model_theta':
     """TASK 1.2: TRAIN MODEL HERE"""
 
@@ -130,8 +126,8 @@ ax.set_ylabel('$|\\bar{\\theta} -\\theta|$')
 ax.set_title('%s - Average prediction error %s' % (str_model_type, '{:.2e}'.format(test_error.mean())))
 
 # MODEL SUMMARY
-plt.show()
 model.summary()
+plt.show()
 
 # INITIALIZE TEST_PENDULUM ENVIRONMENT
 num_sims = 20
