@@ -14,6 +14,11 @@ seed_value = 0
 # seed_experiment(seed=seed_value)  # Comment this line to disable the seeding
 """TASK 1.4: END"""
 
+# USE GPU IF AVAILABLE
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if len(gpus) > 0:
+    tf.config.experimental.set_memory_growth(gpus[0], True)
+
 # LOAD DATASET
 with h5py.File('./dataset.h5', 'r') as hf:
     observation = hf['observation.h5'][:]
@@ -121,8 +126,8 @@ digitized = np.digitize(test_theta, bins)
 bin_means = np.array([test_error[digitized == i].mean() for i in range(1, len(bins))])
 fig, ax = plt.subplots()
 ax.bar(bins[:-1], bin_means, width=np.diff(bins), edgecolor="black", align="edge")
-ax.set_xlabel('$\\theta$')
-ax.set_ylabel('$|\\bar{\\theta} -\\theta|$')
+ax.set_xlabel('$\\theta$ (rad)')
+ax.set_ylabel('$|\\bar{\\theta} -\\theta|$ (rad)')
 ax.set_title('%s - Average prediction error %s' % (str_model_type, '{:.2e}'.format(test_error.mean())))
 
 # MODEL SUMMARY
