@@ -12,7 +12,6 @@ In a terminal on either Linux/MAC OS, you can do so with (change ```INSERT_LOCAL
 ```
 cd INSERT_LOCAL_PATH_TO/KBCS-assignment
 ```
-*Note: it might be that the directory is called* `KBCS-assignment-main` *instead of* `KBCS-assignment`.
 
 To run the code, we require the following dependencies. Install them so that your python 3.7 interpreter can access them. 
 You can do this manually, or by creating an anaconda virtual environment (see next instruction).
